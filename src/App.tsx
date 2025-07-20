@@ -9,8 +9,8 @@ import ContactPage from './pages/ContactPage';
 
 function App() {
   return (
-    <div className="App min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
-      <Router>
+    <Router>
+      <div className="App min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -18,8 +18,8 @@ function App() {
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
-      </Router>
-    </div>
+      </div>
+    </Router>
   );
 }
 

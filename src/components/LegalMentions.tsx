@@ -1,11 +1,14 @@
 import React from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const LegalMentions: React.FC = () => {
   const { elementRef: legalRef, isIntersecting: legalVisible } = useIntersectionObserver({
     threshold: 0.1,
     rootMargin: '-50px',
   });
+
+  const navigate = useNavigate(); // Initialize useNavigate
 
   return (
     <section ref={legalRef} id="legal" className="relative py-16 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -180,11 +183,11 @@ const LegalMentions: React.FC = () => {
           legalVisible ? 'animate-fade-in-up animation-delay-500' : ''
         }`}>
           <a
-            href="/"
+            href="#" // Change href to # or remove it
             className="inline-flex items-center px-6 py-3 border border-gray-700 hover:border-gray-600 text-gray-300 hover:text-white font-semibold rounded-lg transition-all duration-200 hover:bg-gray-800/50 text-sm sm:text-base"
             onClick={(e) => {
-              e.preventDefault();
-              window.location.href = '/';
+              e.preventDefault(); // Prevent browser from handling the default href action
+              navigate('/'); // Use useNavigate to go to the home page
             }}
           >
             <span className="mr-2">🏠</span>
@@ -196,4 +199,4 @@ const LegalMentions: React.FC = () => {
   );
 };
 
-export default LegalMentions; 
+export default LegalMentions;

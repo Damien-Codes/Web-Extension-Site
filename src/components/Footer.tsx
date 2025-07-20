@@ -1,6 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Importer useNavigate
 
 const Footer: React.FC = () => {
+  const navigate = useNavigate(); // Initialiser useNavigate
+
   return (
     <footer className="bg-black border-t border-gray-800 py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -31,6 +34,7 @@ const Footer: React.FC = () => {
             <h4 className="text-base sm:text-lg font-semibold text-white mb-4 sm:mb-6">Liens rapides</h4>
             <ul className="space-y-2 sm:space-y-3">
               <li>
+                {/* Ces liens pointent vers des ancres (#features, #download) */}
                 <a href="#features" className="text-gray-400 hover:text-white transition-colors duration-200 text-sm sm:text-base">
                   Fonctionnalités
                 </a>
@@ -41,7 +45,7 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-              <a href="https://github.com/Damien-Codes/Extensions_PiP-QR_Site" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-200 text-sm sm:text-base">
+                <a href="https://github.com/Damien-Codes/Extensions_PiP-QR_Site" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-200 text-sm sm:text-base">
                   GitHub
                 </a>
               </li>
@@ -58,11 +62,11 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a 
-                  href="/contact" 
+                  href="#" // L'attribut href peut être '#' ou omis car la navigation est gérée par onClick
                   className="text-gray-400 hover:text-white transition-colors duration-200 text-sm sm:text-base"
                   onClick={(e) => {
-                    e.preventDefault();
-                    window.location.href = '/contact';
+                    e.preventDefault(); // Empêche le comportement par défaut de l'ancre
+                    navigate('/contact'); // Utilise useNavigate pour naviguer
                   }}
                 >
                   Contact
@@ -70,11 +74,11 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a 
-                  href="/legal" 
+                  href="#" 
                   className="text-gray-400 hover:text-white transition-colors duration-200 text-sm sm:text-base"
                   onClick={(e) => {
                     e.preventDefault();
-                    window.location.href = '/legal';
+                    navigate('/legal');
                   }}
                 >
                   Mentions légales
@@ -82,11 +86,11 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a 
-                  href="/privacy" 
+                  href="#" 
                   className="text-gray-400 hover:text-white transition-colors duration-200 text-sm sm:text-base"
                   onClick={(e) => {
                     e.preventDefault();
-                    window.location.href = '/privacy';
+                    navigate('/privacy');
                   }}
                 >
                   Politique de confidentialité
@@ -122,4 +126,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer; 
+export default Footer;

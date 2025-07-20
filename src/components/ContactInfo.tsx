@@ -1,11 +1,14 @@
 import React from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const ContactInfo: React.FC = () => {
   const { elementRef: contactRef, isIntersecting: contactVisible } = useIntersectionObserver({
     threshold: 0.1,
     rootMargin: '-50px',
   });
+
+  const navigate = useNavigate(); // Initialize useNavigate
 
   return (
     <section ref={contactRef} id="contact" className="relative py-16 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -54,7 +57,7 @@ const ContactInfo: React.FC = () => {
               href="https://www.instagram.com/skyll_box?igsh=dTMza2JmNTZsbXR3"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-red-900/30 backdrop-blur-md  text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all duration-200 hover:bg-red-500/50 hover:border-red-400 hover:shadow-lg hover:shadow-red-500/25 text-sm sm:text-base"
+              className="inline-block bg-red-900/30 backdrop-blur-md text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all duration-200 hover:bg-red-500/50 hover:border-red-400 hover:shadow-lg hover:shadow-red-500/25 text-sm sm:text-base"
             >
               @skyll_box
             </a>
@@ -73,7 +76,7 @@ const ContactInfo: React.FC = () => {
               href="https://github.com/Damien-Codes"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-red-900/30 backdrop-blur-md  text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all duration-200 hover:bg-red-500/50 hover:border-red-400 hover:shadow-lg hover:shadow-red-500/25 text-sm sm:text-base"
+              className="inline-block bg-red-900/30 backdrop-blur-md text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all duration-200 hover:bg-red-500/50 hover:border-red-400 hover:shadow-lg hover:shadow-red-500/25 text-sm sm:text-base"
             >
               Damien-Codes
             </a>
@@ -90,7 +93,7 @@ const ContactInfo: React.FC = () => {
             </p>
             <a
               href="mailto:pinodamien@gmail.com"
-              className="inline-block bg-red-900/30 backdrop-blur-md  text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all duration-200 hover:bg-red-500/50 hover:border-red-400 hover:shadow-lg hover:shadow-red-500/25 text-sm sm:text-base"
+              className="inline-block bg-red-900/30 backdrop-blur-md text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all duration-200 hover:bg-red-500/50 hover:border-red-400 hover:shadow-lg hover:shadow-red-500/25 text-sm sm:text-base"
             >
               pinodamien@gmail.com
             </a>
@@ -109,7 +112,7 @@ const ContactInfo: React.FC = () => {
               href="https://www.linkedin.com/in/damien-pino/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-red-900/30 backdrop-blur-md  text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all duration-200 hover:bg-red-500/50 hover:border-red-400 hover:shadow-lg hover:shadow-red-500/25 text-sm sm:text-base"
+              className="inline-block bg-red-900/30 backdrop-blur-md text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all duration-200 hover:bg-red-500/50 hover:border-red-400 hover:shadow-lg hover:shadow-red-500/25 text-sm sm:text-base"
             >
               Damien Pino
             </a>
@@ -136,7 +139,7 @@ const ContactInfo: React.FC = () => {
                 href="https://github.com/Damien-Codes/Extensions_PiP-QR_Site/issues"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 bg-red-900/30 backdrop-blur-md  text-white font-semibold rounded-lg transition-all duration-200 hover:bg-red-500/50 hover:border-red-400 hover:shadow-lg hover:shadow-red-500/25 text-sm sm:text-base"
+                className="inline-flex items-center justify-center px-6 py-3 bg-red-900/30 backdrop-blur-md text-white font-semibold rounded-lg transition-all duration-200 hover:bg-red-500/50 hover:border-red-400 hover:shadow-lg hover:shadow-red-500/25 text-sm sm:text-base"
               >
                 <span className="mr-2">🐛</span>
                 Signaler un bug
@@ -145,7 +148,7 @@ const ContactInfo: React.FC = () => {
                 href="https://github.com/Damien-Codes/Extensions_PiP-QR_Site/discussions"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 bg-red-900/30 backdrop-blur-md  text-white font-semibold rounded-lg transition-all duration-200 hover:bg-red-500/50 hover:border-red-400 hover:shadow-lg hover:shadow-red-500/25 text-sm sm:text-base"
+                className="inline-flex items-center justify-center px-6 py-3 bg-red-900/30 backdrop-blur-md text-white font-semibold rounded-lg transition-all duration-200 hover:bg-red-500/50 hover:border-red-400 hover:shadow-lg hover:shadow-red-500/25 text-sm sm:text-base"
               >
                 <span className="mr-2">💭</span>
                 Discussions GitHub
@@ -159,11 +162,11 @@ const ContactInfo: React.FC = () => {
           contactVisible ? 'animate-fade-in-up animation-delay-600' : ''
         }`}>
           <a
-            href="/"
+            href="#" // Change href to # or remove it
             className="inline-flex items-center px-6 py-3 bg-black/50 backdrop-blur-md text-white font-semibold rounded-lg transition-all duration-200 hover:bg-white hover:text-black text-sm sm:text-base"
             onClick={(e) => {
-              e.preventDefault();
-              window.location.href = '/';
+              e.preventDefault(); // Prevent default link behavior
+              navigate('/'); // Use useNavigate to go to the home page
             }}
           >
             <span className="mr-2">🏠</span>
@@ -175,4 +178,4 @@ const ContactInfo: React.FC = () => {
   );
 };
 
-export default ContactInfo; 
+export default ContactInfo;
