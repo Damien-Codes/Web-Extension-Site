@@ -34,12 +34,6 @@ const Footer: React.FC = () => {
             <h4 className="text-base sm:text-lg font-semibold text-white mb-4 sm:mb-6">Liens rapides</h4>
             <ul className="space-y-2 sm:space-y-3">
               <li>
-                {/* Ces liens pointent vers des ancres (#features, #download) */}
-                <a href="#features" className="text-gray-400 hover:text-white transition-colors duration-200 text-sm sm:text-base">
-                  Fonctionnalités
-                </a>
-              </li>
-              <li>
                 <a href="#download" className="text-gray-400 hover:text-white transition-colors duration-200 text-sm sm:text-base">
                   Télécharger
                 </a>
@@ -107,7 +101,7 @@ const Footer: React.FC = () => {
         
         <div className="border-t border-gray-800 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center">
           <p className="text-gray-500 text-sm sm:text-base">
-            © 2024 PiP QR Extension. Développé avec ❤️ par{' '}
+            © 2025 PiP QR Extension. Développé avec ❤️ par{' '}
             <a
               href="https://github.com/damien-codes"
               target="_blank"
