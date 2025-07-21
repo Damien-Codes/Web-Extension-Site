@@ -66,14 +66,14 @@ const Hero: React.FC = () => {
             heroVisible ? 'animate-fade-in-up animation-delay-400' : ''
           }`}>
             <a
-              href="#download"
+              href="https://chromewebstore.google.com/detail/youtube-pip-qr/khmfffompcklfkhmadlkbgiiiaoopaog?authuser=0&hl=fr"
               className="group relative px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-red-600 to-red-700 rounded-lg font-semibold transition-all duration-200 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/25 text-sm sm:text-base"
             >
               <span className="relative z-10">Télécharger l'extension</span>
               <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-700 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
             </a>
             <a
-              href="https://github.com/damien-codes/Extensions_PiP-QR"
+              href="https://github.com/Damien-Codes/Extension_Web"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 sm:px-8 sm:py-4 border border-gray-700 hover:border-gray-600 text-gray-300 hover:text-white font-semibold rounded-lg transition-all duration-200 hover:bg-gray-800/50 text-sm sm:text-base"

@@ -136,7 +136,7 @@ const ContactInfo: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mt-6">
               <a
-                href="https://github.com/Damien-Codes/Extensions_PiP-QR_Site/issues"
+                href="https://github.com/Damien-Codes/Web-Extension-Site/issues"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 bg-red-900/30 backdrop-blur-md text-white font-semibold rounded-lg transition-all duration-200 hover:bg-red-500/50 hover:border-red-400 hover:shadow-lg hover:shadow-red-500/25 text-sm sm:text-base"
@@ -145,7 +145,7 @@ const ContactInfo: React.FC = () => {
                 Signaler un bug
               </a>
               <a
-                href="https://github.com/Damien-Codes/Extensions_PiP-QR_Site/discussions"
+                href="https://github.com/Damien-Codes/Web-Extension-Site/discussions"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 bg-red-900/30 backdrop-blur-md text-white font-semibold rounded-lg transition-all duration-200 hover:bg-red-500/50 hover:border-red-400 hover:shadow-lg hover:shadow-red-500/25 text-sm sm:text-base"

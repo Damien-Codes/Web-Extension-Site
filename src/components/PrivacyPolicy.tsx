@@ -158,7 +158,7 @@ const PrivacyPolicy: React.FC = () => {
               <p>Pour toute question concernant cette politique de confidentialité :</p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4">
                 <a
-                  href="https://github.com/Damien-Codes/Extensions_PiP-QR_Site/issues"
+                  href="https://github.com/Damien-Codes/Web-Extension-Site/issues"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold rounded-lg transition-all duration-200 hover:scale-105 text-sm sm:text-base"

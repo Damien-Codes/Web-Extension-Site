@@ -1,8 +1,23 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Importer useNavigate
+import { useNavigate } from 'react-router-dom';
 
 const Footer: React.FC = () => {
-  const navigate = useNavigate(); // Initialiser useNavigate
+  const navigate = useNavigate();
+
+  const handleDownloadClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault(); // Prevent the default anchor link behavior
+    const element = document.getElementById('download');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      // If the 'download' element is not on the current page,
+      // you might want to navigate to the home page first and then scroll.
+      // For now, based on your request, we only scroll if it's on the current page.
+      // If you decide to navigate, you'd use something like:
+      // navigate('/', { state: { scrollToId: 'download' } });
+      // and handle it in the Home component's useEffect, as discussed before.
+    }
+  };
 
   return (
     <footer className="bg-black border-t border-gray-800 py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
@@ -17,7 +32,7 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://github.com/Damien-Codes/Extensions_PiP-QR_Site"
+                href="https://github.com/Damien-Codes"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-white transition-colors duration-200"
@@ -34,12 +49,16 @@ const Footer: React.FC = () => {
             <h4 className="text-base sm:text-lg font-semibold text-white mb-4 sm:mb-6">Liens rapides</h4>
             <ul className="space-y-2 sm:space-y-3">
               <li>
-                <a href="#download" className="text-gray-400 hover:text-white transition-colors duration-200 text-sm sm:text-base">
+                <a
+                  href="#download" // Keep href="#download" for accessibility/SEO, but onClick will override
+                  className="text-gray-400 hover:text-white transition-colors duration-200 text-sm sm:text-base"
+                  onClick={handleDownloadClick} // Use the new handler
+                >
                   Télécharger
                 </a>
               </li>
               <li>
-                <a href="https://github.com/Damien-Codes/Extensions_PiP-QR_Site" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-200 text-sm sm:text-base">
+                <a href="https://github.com/Damien-Codes" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-200 text-sm sm:text-base">
                   GitHub
                 </a>
               </li>
@@ -50,7 +69,7 @@ const Footer: React.FC = () => {
             <h4 className="text-base sm:text-lg font-semibold text-white mb-4 sm:mb-6">Support</h4>
             <ul className="space-y-2 sm:space-y-3">
               <li>
-                <a href="https://github.com/Damien-Codes/Extensions_PiP-QR_Site/issues" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-200 text-sm sm:text-base">
+                <a href="https://github.com/Damien-Codes/Web-Extension-Site/issues" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-200 text-sm sm:text-base">
                   Signaler un bug
                 </a>
               </li>
@@ -110,9 +129,6 @@ const Footer: React.FC = () => {
             >
               Damien Codes
             </a>
-          </p>
-          <p className="text-gray-600 text-xs sm:text-sm mt-2">
-            Extension open source sous licence MIT
           </p>
         </div>
       </div>

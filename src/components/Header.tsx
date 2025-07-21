@@ -54,7 +54,7 @@ const Header: React.FC = () => {
             >
               Télécharger
             </button>
-            <a href="https://github.com/Damien-Codes/Extensions_PiP-QR_Site" target="_blank" rel="noopener noreferrer" className="border border-white text-white rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-white hover:text-black">
+            <a href="https://github.com/Damien-Codes" target="_blank" rel="noopener noreferrer" className="border border-white text-white rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-white hover:text-black">
               GitHub
             </a>
           </nav>
